@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collections</title>
-    <!--Link CSS File-->
-    <link rel="stylesheet" href="./public/style.css">
-
-    </style>
-    <!--Link Google Fonts-->
+    <title>Collections | Nostra</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <!--Link Font Awesome-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'DM Sans', sans-serif
+        }
 
+        .serif {
+            font-family: 'Playfair Display', serif
+        }
+    </style>
 </head>
+
 <body class="bg-[#faf9f6] text-[#242424]">
     <div id="offer-bar" class="bg-[#242424] px-4 py-2 text-center text-xs text-white sm:text-sm">Sign up today and get
         <strong class="text-amber-300">20% OFF</strong> your first order <button id="offer-close" class="ml-4"
-            aria-label="Close offer"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-</svg>
-</button>
+            aria-label="Close offer"><i class="fa-solid fa-xmark"></i></button>
     </div>
     <header class="sticky top-0 z-40 border-b border-black/5 bg-[#faf9f6]/95 backdrop-blur">
         <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-8"><a href="index.html"
@@ -122,90 +125,93 @@
             <p class="text-xs text-white/50">© 2026 Nostra. All rights reserved.</p>
         </div>
     </footer>
-    
-    <script >
-const products = [
-    {
-        id:1,
-        name:"Floral Summer Shirt",
-        src:"products/f1.jpg",
-        desc:"",
-        price:220,
-        tags:["new","summer"]
-    },
+    <script>
+        const products = [
+            {
+                id: 1,
+                name: "Floral Summer Shirt",
+                src: "products/f1.jpg",
+                desc: "",
+                price: 220,
+                tags: ["new", "blue", "summer"]
+            },
 
-    {
-        id:2,
-        name:"Summer Green",
-        src:"products/f2.jpg",
-        desc:"",
-        price:260,
-        tags:["new","green","beach"]
-    },
+            {
+                id: 2,
+                name: "Summer Green",
+                src: "products/f2.jpg",
+                desc: "",
+                price: 260,
+                tags: ["new", "green", "beach"]
+            },
 
-    {
-        id:3,
-        name:"Party Floral Shirt",
-        src:"products/f3.jpg",
-        desc:"",
-        price:399,
-        tags:["old","red","party"]
-    },
+            {
+                id: 3,
+                name: "Party Floral Shirt",
+                src: "products/f3.jpg",
+                desc: "",
+                price: 399,
+                tags: ["old", "red", "party"]
+            },
 
-    {
-        id:4,
-        name:"Floral Summer Shirt",
-        src:"products/f4.jpg",
-        desc:"",
-        price:399,
-        tags:["old","white","beach"]
-    },
-    {
-        id:5,
-        name:"Beach Shirt",
-        src:"products/f5.jpg",
-        desc:"",
-        price:579,
-        tags:["old","blue","beach"]
-    }
-,
-    {
-        id:6,
-        name:"Shirt Party Red",
-        src:"products/f6.jpg",
-        desc:"",
-        price:579,
-        tags:["new","red","party"]
-    },
+            {
+                id: 4,
+                name: "Floral Summer Shirt",
+                src: "products/f4.jpg",
+                desc: "",
+                price: 399,
+                tags: ["old", "white", "beach"]
+            },
+            {
+                id: 5,
+                name: "Beach Shirt",
+                src: "products/f5.jpg",
+                desc: "",
+                price: 579,
+                tags: ["old", "white", "beach"]
+            }
+            ,
+            {
+                id: 6,
+                name: "Shirt Party Red",
+                src: "products/f6.jpg",
+                desc: "",
+                price: 579,
+                tags: ["old", "red", "party"]
+            },
 
-    {
-        id:7,
-        name:"Party Floral Shirt",
-        src:"products/f3.jpg",
-        desc:"",
-        price:399,
-        tags:["old","red","party"]
-    },
-    {
-        id:8,
-        name:"Shirt Party Red",
-        src:"products/f6.jpg",
-        desc:"",
-        price:579,
-        tags:["old","red","party"]
-    },
-    {
-        id:9,
-        name:"Floral Summer Shirt",
-        src:"products/f1.jpg",
-        desc:"",
-        price:220,
-        tags:["red","summer"]
-    },
+            {
+                id: 7,
+                name: "Party Floral Shirt",
+                src: "products/f3.jpg",
+                desc: "",
+                price: 399,
+                tags: ["old", "red", "party"]
+            },
+            {
+                id: 8,
+                name: "Shirt Party Red",
+                src: "products/f6.jpg",
+                desc: "",
+                price: 579,
+                tags: ["old", "red", "party"]
+            },
+            {
+                id: 9,
+                name: "Floral Summer Shirt",
+                src: "products/f1.jpg",
+                desc: "",
+                price: 220,
+                tags: ["new", "blue", "summer"]
+            },
 
 
-]
- const grid = document.getElementById('products')
+        ]
+
+        
+
+
+        const grid = document.getElementById('products')
          search = document.getElementById('product-search')
          checks = [...document.querySelectorAll('input[name="filter"]')]; 
         function render()
@@ -249,6 +255,8 @@ const products = [
             document.getElementById('newsletter-message').textContent = 'Thanks for subscribing!'; e.target.reset()
         });
 
+       
     </script>
 </body>
+
 </html>
