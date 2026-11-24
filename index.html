@@ -32,25 +32,33 @@
 
 <body class="bg-[#faf9f6] text-[#242424]">
   <div id="offer-bar" class="bg-[#242424] px-4 py-2 text-center text-xs text-white sm:text-sm">Sign up today and get
-        <strong class="text-amber-300">20% OFF</strong> your first order 
-        <button id="offer-close" class="ml-4" aria-label="Close offer"><i class="fa-solid fa-xmark"></i></button>
+        <strong class="text-amber-300">20% OFF</strong> your first order <button id="offer-close" class="ml-4"
+            aria-label="Close offer"><i class="fa-solid fa-xmark"></i></button>
     </div>
-  <header class="sticky top-0 z-40 border-b border-black/5 bg-[#faf9f6]/95 backdrop-blur">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-8">
-        <a href="index.html" class="serif text-3xl font-bold tracking-tight">Nostra<span class="text-orange-600">.</span></a>
-      <div class="hidden items-center gap-9 text-sm font-semibold md:flex"><a class="hover:text-orange-600"
-          href="index.html">Home</a><a class="hover:text-orange-600" href="collections.html">Collections</a><a
-          class="hover:text-orange-600" href="contactus.html">Contact Us</a></div>
-      <div class="flex items-center gap-5"><a href="collections.html" aria-label="Shop"
-          class="hidden text-lg sm:block"><i class="fa-solid fa-bag-shopping"></i></a><button id="menu-open"
-          class="text-xl md:hidden" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button></div>
-    </nav>
-  </header>
+    <header class="sticky top-0 z-40 border-b border-black/5 bg-[#faf9f6]/95 backdrop-blur">
+        <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-8"><a href="index.html"
+                class="serif text-3xl font-bold">Nostra<span class="text-orange-600">.</span></a>
+            <div class="hidden gap-9 text-sm font-semibold md:flex"><a href="index.html"
+                    class="hover:text-orange-600">Home</a><a href="collections.html"
+                    class="text-orange-700">Collections</a><a href="contactus.html"
+                    class="hover:text-orange-600">Contact Us</a></div><button id="menu-open" class="text-xl md:hidden"
+                aria-label="Open menu"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+</svg>
+</button>
+        </nav>
+    </header>
   <div id="mobile-menu" class="fixed inset-0 z-50 hidden bg-[#242424] p-7 text-white">
-    <div class="flex justify-end"><button id="menu-close" aria-label="Close menu" class="text-2xl"><i
-          class="fa-solid fa-xmark"></i></button></div>
+    <div class="flex justify-end">
+      <button id="menu-close" aria-label="Close menu" class="text-2xl">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+</svg>
+
+      </button>
+      </div>
     <div class="mt-16 flex flex-col gap-8 text-2xl"><a href="index.html">Home</a><a
-        href="collections.html">Collections</a><a href="contactus.html">Contact Us</a></div>
+        href="collections.html">Collections</a><a href="">Contact Us</a><a href="contactus.html">Contact Us</a></div>
   </div>
   <main class="mx-auto max-w-7xl px-5 md:px-8">
     <section class="relative mt-6 overflow-hidden bg-[#e9e2d8]">
@@ -70,10 +78,15 @@
         </div>
       </div>
       <div class="absolute bottom-5 right-5 flex gap-2"><button id="slide-prev"
-          class="grid h-10 w-10 place-items-center rounded-full bg-white/90" aria-label="Previous slide"><i
-            class="fa-solid fa-arrow-left"></i></button><button id="slide-next"
-          class="grid h-10 w-10 place-items-center rounded-full bg-white/90" aria-label="Next slide"><i
-            class="fa-solid fa-arrow-right"></i></button></div>
+          class="grid h-10 w-10 place-items-center rounded-full bg-white/90" aria-label="Previous slide"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+</svg>
+</button><button id="slide-next"
+          class="grid h-10 w-10 place-items-center rounded-full bg-white/90" aria-label="Next slide">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+</svg>
+</button></div>
     </section>
     <section class="py-16">
       <div class="flex items-end justify-between">
@@ -83,13 +96,20 @@
         </div>
       </div>
       <div class="mt-9 grid grid-cols-2 gap-4 text-center sm:grid-cols-4 lg:grid-cols-7">
-        <div class="border border-black/10 bg-white p-5 font-bold">PUMA</div>
-        <div class="border border-black/10 bg-white p-5 font-bold">adidas</div>
-        <div class="border border-black/10 bg-white p-5 font-bold">Allen Solly</div>
-        <div class="border border-black/10 bg-white p-5 font-bold">LEAVES</div>
-        <div class="border border-black/10 bg-white p-5 font-bold">BEHANCE</div>
-        <div class="border border-black/10 bg-white p-5 font-bold">twitch</div>
-        <div class="border border-black/10 bg-white p-5 font-bold">LEAVES</div>
+        <div class="border border-black/10 bg-white p-5 font-bold">
+          <img class="brands-icon" src="img/icons/behance.png" alt="">PUMA</div>
+        <div class="border border-black/10 bg-white p-5 font-bold">
+          <img class="brands-icon" src="img/icons/adidas.png" alt="">adidas</div>
+        <div class="border border-black/10 bg-white p-5 font-bold">
+          <img class="brands-icon" src="img/icons/nike.png" alt="">Nike</div>
+        <div class="border border-black/10 bg-white p-5 font-bold">
+          <img class="brands-icon" src="img/icons/leaves.png" alt="">LEAVES</div>
+        <div class="border border-black/10 bg-white p-5 font-bold">
+          <img class="brands-icon" src="img/icons/behance.png" alt="">BEHANCE</div>
+        <div class="border border-black/10 bg-white p-5 font-bold">
+          <img class="brands-icon" src="img/icons/twitch.png" alt="">twitch</div>
+          <div class="border border-black/10 bg-white p-5 font-bold">
+          <img class="brands-icon" src="img/icons/adidas.png" alt="">adidas</div>
       </div>
     </section>
     <section class="pb-16">
@@ -186,12 +206,14 @@
     const slides = ['img/others/slider-one.jpg', 'img/others/slider-two.jpg', 'img/others/slider-three.jpg'];
     let slide = 0; function showSlide() { document.getElementById('hero-image').src = slides[slide] }
     document.getElementById('slide-next').onclick = () => { slide = (slide + 1) % slides.length; showSlide() };
-     document.getElementById('slide-prev').onclick = () =>
-      { slide = (slide + slides.length - 1) % slides.length; showSlide() 
+    document.getElementById('slide-prev').onclick = () => {
+      slide = (slide + slides.length - 1) % slides.length; showSlide()
 
-     }; setInterval(() => { slide = (slide + 1) % slides.length; showSlide() }, 5000);
-    document.getElementById('newsletter-form').addEventListener('submit', e => { e.preventDefault(); 
-    document.getElementById('newsletter-message').textContent = 'Thanks for subscribing!'; e.target.reset() });
+    }; setInterval(() => { slide = (slide + 1) % slides.length; showSlide() }, 5000);
+    document.getElementById('newsletter-form').addEventListener('submit', e => {
+      e.preventDefault();
+      document.getElementById('newsletter-message').textContent = 'Thanks for subscribing!'; e.target.reset()
+    });
   </script>
 </body>
 

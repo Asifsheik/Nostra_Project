@@ -29,6 +29,10 @@
 
 </head>
 <body class="bg-[#faf9f6] text-[#242424]">
+    <div id="offer-bar" class="bg-[#242424] px-4 py-2 text-center text-xs text-white sm:text-sm">Sign up today and get
+        <strong class="text-amber-300">20% OFF</strong> your first order <button id="offer-close" class="ml-4"
+            aria-label="Close offer"><i class="fa-solid fa-xmark"></i></button>
+            </div>
     <header class="sticky top-0 z-40 border-b border-black/5 bg-[#faf9f6]/95 backdrop-blur">
         <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-8"><a href="index.html"
                 class="serif text-3xl font-bold">Nostra<span class="text-orange-600">.</span></a>
@@ -36,12 +40,15 @@
                     class="hover:text-orange-600">Home</a><a href="collections.html"
                     class="hover:text-orange-600">Collections</a><a href="contactus.html"
                     class="text-orange-700">Contact Us</a></div><button id="menu-open" class="text-xl md:hidden"
-                aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+                aria-label="Open menu"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+</svg></button>
         </nav>
     </header>
     <div id="mobile-menu" class="fixed inset-0 z-50 hidden bg-[#242424] p-7 text-white">
-        <div class="flex justify-end"><button id="menu-close" class="text-2xl" aria-label="Close menu"><i
-                    class="fa-solid fa-xmark"></i></button></div>
+        <div class="flex justify-end"><button id="menu-close" class="text-2xl" aria-label="Close menu"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+</svg></button></div>
         <div class="mt-16 flex flex-col gap-8 text-2xl"><a href="index.html">Home</a><a
                 href="collections.html">Collections</a><a href="contactus.html">Contact Us</a></div>
     </div>
