@@ -1,147 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Nostra</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!--Link CSS File-->
+    <link rel="stylesheet" href="style.css">
+    <!--Link Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <!--Link Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <style>
-        body {
-            font-family: 'DM Sans', sans-serif
-        }
-        .serif {
-            font-family: 'Playfair Display', serif
-        }
-    </style>
 </head>
+<body>
 
-<body class="bg-[#faf9f6] text-[#242424]">
-    <header class="sticky top-0 z-40 border-b border-black/5 bg-[#faf9f6]/95 backdrop-blur">
-        <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-8"><a href="index.html"
-                class="serif text-3xl font-bold">Nostra<span class="text-orange-600">.</span></a>
-            <div class="hidden gap-9 text-sm font-semibold md:flex"><a href="index.html"
-                    class="hover:text-orange-600">Home</a><a href="collections.html"
-                    class="hover:text-orange-600">Collections</a><a href="contactus.html"
-                    class="text-orange-700">Contact Us</a></div><button id="menu-open" class="text-xl md:hidden"
-                aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
-        </nav>
-    </header>
-    <div id="mobile-menu" class="fixed inset-0 z-50 hidden bg-[#242424] p-7 text-white">
-        <div class="flex justify-end"><button id="menu-close" class="text-2xl" aria-label="Close menu"><i
-                    class="fa-solid fa-xmark"></i></button></div>
-        <div class="mt-16 flex flex-col gap-8 text-2xl"><a href="index.html">Home</a><a
-                href="collections.html">Collections</a><a href="contactus.html">Contact Us</a></div>
+    <!--Offer Bar-->
+    <div class="offer-bar">
+        <p>Sign up and <b>get 20% off</b> your first order
+            <i id="offer-close" class="fa-solid fa-xmark"></i>
+        </p>
     </div>
-    <main>
-        <section class="px-5 py-16 text-center md:py-20">
-            <p class="text-xs font-bold uppercase tracking-[.28em] text-orange-700">We'd love to hear from you</p>
-            <h1 class="serif mt-4 text-5xl sm:text-6xl">Let's talk <em class="text-orange-600">fashion.</em></h1>
-            <p class="mx-auto mt-5 max-w-xl text-sm leading-7 text-neutral-500">Questions about an order, a product or
-                just want to say hello? Send us a message and our team will be happy to help.</p>
+
+    <!--Navigation Bar-->
+    <nav class="navbar">
+        <h1><a href="./index.html">Nostra</a></h1>
+        <div class="navbar-links">
+            <p class="navbar-link"><a href="./index.html">Home</a></p>
+            <p class="navbar-link"><a href="./index.html#new-arrival">New Arrival</a></p>
+            <p class="navbar-link"><a href="./index.html#most-wanted">Most Wanted</a></p>
+            <p class="navbar-link"><a href="./collections.html">Collections</a></p>
+            <p class="navbar-link"><a href="./contactus.html" class="active">Contact Us</a></p>
+        </div>
+
+        <div class="navbar-menu-toggle">
+            <i id="side-navbar-activate" class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+    <!--Side Navbar-->
+    <div class="side-navbar">
+        <p class="side-navbar-close-wrap">
+            <i id="side-navbar-close" class="fa-solid fa-xmark"></i>
+        </p>
+        <div class="side-navbar-links">
+            <p class="side-navbar-link"><a href="./index.html">Home</a></p>
+            <p class="side-navbar-link"><a href="./index.html#most-wanted">Most Wanted</a></p>
+            <p class="side-navbar-link"><a href="./collections.html">Collections</a></p>
+            <p class="side-navbar-link"><a href="./contactus.html">Contact Us</a></p>
+        </div>
+    </div>
+
+    <main class="container">
+
+        <!--Page Header-->
+        <header class="page-hero">
+            <p class="breadcrumb"><a href="./index.html">Home</a> / Contact Us</p>
+            <p class="eyebrow eyebrow-left">Get in touch</p>
+            <h1>We'd love to hear from you</h1>
+            <p class="page-hero-text">Questions about an order, sizing, or our collections? Send us a message and our team will get back to you.</p>
+        </header>
+
+        <!--Contact Layout-->
+        <section class="contact-layout">
+
+            <aside class="contact-info">
+                <h3>Visit the studio</h3>
+                <div class="contact-info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h4>Address</h4>
+                        <p>Nostra Studio, Lorem Street, Chennai, Tamil Nadu</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>hello@nostra.com</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+91 00000 00000</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fa-solid fa-clock"></i>
+                    <div>
+                        <h4>Hours</h4>
+                        <p>Mon to Sat, 10am to 7pm</p>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="contact-form">
+                <h2>Send us a message</h2>
+                <p class="contact-form-sub">Fields marked with a star are required.</p>
+                <form action="#" method="post">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="name">Name <span>*</span></label>
+                            <input type="text" id="name" name="name" placeholder="Your full name" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="email">Email <span>*</span></label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="message">Message <span>*</span></label>
+                        <textarea id="message" name="message" placeholder="How can we help?" required></textarea>
+                    </div>
+
+                    <input type="submit" value="Send Message" class="submit-btn">
+                </form>
+            </div>
         </section>
-        <section class="mx-auto max-w-6xl px-5 pb-20 md:px-8">
-            <div class="grid overflow-hidden bg-white shadow-[0_20px_70px_rgba(0,0,0,.06)] md:grid-cols-5">
-                <aside class="bg-[#242424] p-8 text-white md:col-span-2 md:p-12">
-                    <p class="text-xs font-bold uppercase tracking-[.25em] text-orange-300">Get in touch</p>
-                    <h2 class="serif mt-4 text-3xl">We're here<br>to help.</h2>
-                    <p class="mt-5 text-sm leading-7 text-white/60">Reach out to us through any of the channels below.
-                        We look forward to hearing from you.</p>
-                    <div class="mt-12 space-y-8">
-                        <div class="flex gap-5"><i class="fa-solid fa-phone mt-1 text-orange-400"></i>
-                            <div>
-                                <h3 class="font-semibold">Phone</h3>
-                                <p class="mt-1 text-sm text-white/60">+91 98765 43210</p>
-                                <p class="mt-1 text-xs text-white/40">Mon - Sat, 9 AM - 6 PM</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-5"><i class="fa-regular fa-envelope mt-1 text-orange-400"></i>
-                            <div>
-                                <h3 class="font-semibold">Email</h3>
-                                <p class="mt-1 text-sm text-white/60">support@nostra.com</p>
-                                <p class="mt-1 text-xs text-white/40">We aim to reply within 24 hours</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-5"><i class="fa-solid fa-location-dot mt-1 text-orange-400"></i>
-                            <div>
-                                <h3 class="font-semibold">Our store</h3>
-                                <p class="mt-1 text-sm leading-6 text-white/60">Visit us online or contact our team for
-                                    store information.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-12 border-t border-white/15 pt-7">
-                        <p class="mb-4 text-xs font-bold uppercase tracking-widest">Follow our style</p>
-                        <div class="flex gap-5 text-sm text-white/60"><a href="#"
-                                class="hover:text-orange-300">Instagram</a><a href="#"
-                                class="hover:text-orange-300">Facebook</a><a href="#"
-                                class="hover:text-orange-300">Pinterest</a></div>
-                    </div>
-                </aside>
-                <div class="p-8 md:col-span-3 md:p-12">
-                    <p class="text-xs font-bold uppercase tracking-[.25em] text-orange-700">Send a message</p>
-                    <h2 class="serif mt-3 text-3xl">How can we help?</h2>
-                    <p class="mt-3 text-sm text-neutral-500">Fill in the details below and we'll get back to you.</p>
-                    <form id="contact-form" class="mt-9 space-y-7">
-                        <div class="grid gap-6 sm:grid-cols-2"><label class="block text-sm font-semibold">Your name
-                                *<input required name="name" type="text" placeholder="Enter your name"
-                                    class="mt-3 w-full border-b border-neutral-300 bg-transparent py-3 text-sm font-normal outline-none transition focus:border-orange-600"></label><label
-                                class="block text-sm font-semibold">Email address *<input required name="email"
-                                    type="email" placeholder="Enter your email"
-                                    class="mt-3 w-full border-b border-neutral-300 bg-transparent py-3 text-sm font-normal outline-none transition focus:border-orange-600"></label>
-                        </div><label class="block text-sm font-semibold " >Phone number<input name="phone" maxlength="10" type="tel"
-                                placeholder="9876543210"
-                                class="mt-3 w-full border-b border-neutral-300 bg-transparent py-3 text-sm font-normal outline-none focus:border-orange-600"></label><label
-                            class="block text-sm font-semibold">How can we help?<select name="subject"
-                                class="mt-3 w-full border-b border-neutral-300 bg-transparent py-3 text-sm font-normal outline-none focus:border-orange-600">
-                                <option value="">Select a subject</option>
-                                <option>Order Related</option>
-                                <option>Return & Refund</option>
-                                <option>Product Information</option>
-                                <option>Shipping & Delivery</option>
-                                <option>Other Enquiries</option>
-                            </select></label><label class="block text-sm font-semibold">Your message *<textarea required
-                                name="message" rows="4" placeholder="Write your message here..."
-                                class="mt-3 w-full resize-y border-b border-neutral-300 bg-transparent py-3 text-sm font-normal outline-none focus:border-orange-600"></textarea></label><button
-                            type="submit"
-                            class="inline-flex items-center gap-4 bg-[#242424] px-8 py-4 text-xs font-bold uppercase tracking-widest text-white transition hover:bg-orange-700">Send
-                            message <i class="fa-solid fa-arrow-right"></i></button>
-                        <p id="form-message" class="text-sm text-green-700" aria-live="polite"></p>
-                    </form>
+
+        <!--Newsletter-->
+        <section class="news">
+            <h2>Join our Newsletter</h2>
+            <p>Sign up for our email newsletter to get exclusive discounts, updates, and more.</p>
+            <div class="news-form">
+                <input class="search" type="email" placeholder="Enter your email">
+                <button>Subscribe <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </section>
+
+    </main>
+
+    <!--Footer-->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-box-1">
+                <h2 class="headingText">Nostra</h2>
+                <p>Nostra, India’s no. 1 online fashion destination justifies its fashion relevance by bringing something new and chic to the table on the daily. </p>
+                <div class="footer-icon-container">
+                    <i class="icon fa-brands fa-instagram"></i>
+                    <i class="icon fa-brands fa-twitter"></i>
+                    <i class="icon fa-brands fa-facebook"></i>
                 </div>
             </div>
-        </section>
-    </main>
-    <footer class="bg-[#242424] px-5 py-10 text-white md:px-8">
-        <div class="mx-auto flex max-w-7xl flex-col justify-between gap-6 sm:flex-row">
-            <div><a href="index.html" class="serif text-3xl font-bold">Nostra<span class="text-orange-500">.</span></a>
-                <p class="mt-2 text-sm text-white/60">Looking good should feel this easy.</p>
-            </div>
-            <div class="flex gap-6 text-sm"><a href="index.html">Home</a><a href="collections.html">Collections</a><a
-                    href="contactus.html">Contact</a></div>
-            <p class="text-xs text-white/50">© 2026 Nostra. All rights reserved.</p>
         </div>
+        <p class="subtitle">&copy; 2026 Nostra.com</p>
     </footer>
-    <script>
 
-    const menu = document.getElementById('mobile-menu'); 
-    document.getElementById('menu-open').onclick = () => menu.classList.remove('hidden'); 
-
-    document.getElementById('menu-close').onclick = () => menu.classList.add('hidden');
-
-     document.getElementById('contact-form').addEventListener('submit', e =>
-      { 
-        e.preventDefault();
-        document.getElementById('form-message').textContent = 'Thank you! Your message has been Summited.';
-       e.target.reset()
-     });
-    </script>
+    <!--Link Javascript File-->
+    <script src="./contact.js"></script>
 </body>
-
 </html>

@@ -1,212 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nostra | Everyday Style</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <style>
-    body {
-      font-family: 'DM Sans', sans-serif
-    }
-
-    .serif {
-      font-family: 'Playfair Display', serif
-    }
-
-    .hero-slide {
-      transition: opacity .5s ease
-    }
-
-    .hide-scrollbar::-webkit-scrollbar {
-      display: none
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostra</title>
+    <!--Link CSS File-->
+    <link rel="stylesheet" href="style.css">
+    <!--Link Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <!--Link Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
+<body>
 
-<body class="bg-[#faf9f6] text-[#242424]">
-  <div id="offer-bar" class="bg-[#242424] px-4 py-2 text-center text-xs sm:text-sm text-white">Sign up today and get
-    <strong class="text-amber-300">20% OFF</strong> your first order <button id="offer-close" aria-label="Close offer"
-      class="ml-4"><i class="fa-solid fa-xmark"></i></button>
-  </div>
-  <header class="sticky top-0 z-40 border-b border-black/5 bg-[#faf9f6]/95 backdrop-blur">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-8"><a href="index.html"
-        class="serif text-3xl font-bold tracking-tight">Nostra<span class="text-orange-600">.</span></a>
-      <div class="hidden items-center gap-9 text-sm font-semibold md:flex"><a class="hover:text-orange-600"
-          href="index.html">Home</a><a class="hover:text-orange-600" href="collections.html">Collections</a><a
-          class="hover:text-orange-600" href="contactus.html">Contact Us</a></div>
-      <div class="flex items-center gap-5"><a href="collections.html" aria-label="Shop"
-          class="hidden text-lg sm:block"><i class="fa-solid fa-bag-shopping"></i></a><button id="menu-open"
-          class="text-xl md:hidden" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button></div>
-    </nav>
-  </header>
-  <div id="mobile-menu" class="fixed inset-0 z-50 hidden bg-[#242424] p-7 text-white">
-    <div class="flex justify-end"><button id="menu-close" aria-label="Close menu" class="text-2xl"><i
-          class="fa-solid fa-xmark"></i></button></div>
-    <div class="mt-16 flex flex-col gap-8 text-2xl"><a href="index.html">Home</a><a
-        href="collections.html">Collections</a><a href="contactus.html">Contact Us</a></div>
-  </div>
-  <main class="mx-auto max-w-7xl px-5 md:px-8">
-    <section class="relative mt-6 overflow-hidden bg-[#e9e2d8]">
-      <div class="grid min-h-[490px] items-center md:grid-cols-2">
-        <div class="relative z-10 px-8 py-14 md:px-14">
-          <p class="mb-5 text-xs font-bold uppercase tracking-[.28em] text-orange-700">New season · New energy</p>
-          <h1 class="serif max-w-xl text-5xl leading-[1.12] sm:text-6xl">Find your style.<br><em class="font-medium">Own
-              your moment.</em></h1>
-          <p class="mt-6 max-w-md text-sm leading-7 text-neutral-600">Thoughtful everyday essentials and statement
-            pieces made to move with you.</p><a href="collections.html"
-            class="mt-8 inline-flex items-center gap-4 bg-[#242424] px-7 py-4 text-xs font-bold uppercase tracking-widest text-white transition hover:bg-orange-700">Explore
-            collection <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-        <div class="relative h-72 overflow-hidden md:h-full"><img id="hero-image" src="img/others/slider-one.jpg"
-            alt="Nostra latest fashion collection" class="h-full w-full object-cover">
-          <div class="absolute inset-0 bg-gradient-to-r from-[#e9e2d8]/30 to-transparent"></div>
-        </div>
-      </div>
-      <div class="absolute bottom-5 right-5 flex gap-2"><button id="slide-prev"
-          class="grid h-10 w-10 place-items-center rounded-full bg-white/90" aria-label="Previous slide"><i
-            class="fa-solid fa-arrow-left"></i></button><button id="slide-next"
-          class="grid h-10 w-10 place-items-center rounded-full bg-white/90" aria-label="Next slide"><i
-            class="fa-solid fa-arrow-right"></i></button></div>
-    </section>
-    <section class="py-16">
-      <div class="flex items-end justify-between">
-        <div>
-          <p class="text-xs font-bold uppercase tracking-[.25em] text-orange-700">A few good names</p>
-          <h2 class="serif mt-2 text-3xl sm:text-4xl">Brands we love</h2>
-        </div>
-      </div>
-      <div class="mt-9 grid grid-cols-2 gap-4 text-center sm:grid-cols-4 lg:grid-cols-7">
-        <div class="border border-black/10 bg-white p-5 font-bold">PUMA</div>
-        <div class="border border-black/10 bg-white p-5 font-bold">adidas</div>
-        <div class="border border-black/10 bg-white p-5 font-bold">Allen Solly</div>
-        <div class="border border-black/10 bg-white p-5 font-bold">LEAVES</div>
-        <div class="border border-black/10 bg-white p-5 font-bold">BEHANCE</div>
-        <div class="border border-black/10 bg-white p-5 font-bold">twitch</div>
-        <div class="border border-black/10 bg-white p-5 font-bold">LEAVES</div>
-      </div>
-    </section>
-    <section class="pb-16">
-      <div class="mb-8 flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
-        <div>
-          <p class="text-xs font-bold uppercase tracking-[.25em] text-orange-700">The Nostra difference</p>
-          <h2 class="serif mt-2 text-3xl sm:text-4xl">A better way to shop</h2>
-        </div>
-        <p class="max-w-md text-sm leading-6 text-neutral-500">We keep the experience simple: considered products,
-          helpful service and a little inspiration in every visit.</p>
-      </div>
-      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <article class="bg-[#eeeae3] p-6"><i class="fa-regular fa-circle-check text-2xl"></i>
-          <h3 class="mt-5 font-bold">Quality first</h3>
-          <p class="mt-2 text-sm leading-6 text-neutral-600">Carefully selected styles for your everyday wardrobe.</p>
-        </article>
-        <article class="bg-[#eeeae3] p-6"><i class="fa-regular fa-face-smile text-2xl"></i>
-          <h3 class="mt-5 font-bold">Customer care</h3>
-          <p class="mt-2 text-sm leading-6 text-neutral-600">A friendly team ready to help with your shopping needs.</p>
-        </article>
-        <article class="bg-[#eeeae3] p-6"><i class="fa-solid fa-wand-magic-sparkles text-2xl"></i>
-          <h3 class="mt-5 font-bold">Fresh arrivals</h3>
-          <p class="mt-2 text-sm leading-6 text-neutral-600">New looks and fresh finds added to our collection.</p>
-        </article>
-        <article class="bg-[#eeeae3] p-6"><i class="fa-solid fa-truck-fast text-2xl"></i>
-          <h3 class="mt-5 font-bold">Easy delivery</h3>
-          <p class="mt-2 text-sm leading-6 text-neutral-600">Convenient delivery to bring your picks to your door.</p>
-        </article>
-      </div>
-    </section>
-    <section class="pb-16">
-      <div class="mb-7 flex items-end justify-between">
-        <div>
-          <p class="text-xs font-bold uppercase tracking-[.25em] text-orange-700">Just landed</p>
-          <h2 class="serif mt-2 text-3xl sm:text-4xl">New arrivals</h2>
-        </div><a href="collections.html" class="text-sm font-bold underline underline-offset-4">View all</a>
-      </div>
-      <div class="grid grid-cols-2 gap-4 md:grid-cols-4"><a href="collections.html" class="group"><img
-            src="img/products/f1.jpg" alt="Floral shirt"
-            class="aspect-[3/4] w-full bg-[#eeeae3] object-cover transition group-hover:scale-[1.02]">
-          <p class="mt-3 font-semibold">Floral summer shirt</p>
-          <p class="mt-1 text-sm text-neutral-500">Explore collection</p>
-        </a><a href="collections.html" class="group"><img src="img/products/f7.jpg" alt="New season shirt"
-            class="aspect-[3/4] w-full bg-[#eeeae3] object-cover transition group-hover:scale-[1.02]">
-          <p class="mt-3 font-semibold">Everyday essentials</p>
-          <p class="mt-1 text-sm text-neutral-500">Explore collection</p>
-        </a><a href="collections.html" class="group"><img src="img/products/n1.jpg" alt="New arrival"
-            class="aspect-[3/4] w-full bg-[#eeeae3] object-cover transition group-hover:scale-[1.02]">
-          <p class="mt-3 font-semibold">Weekend edit</p>
-          <p class="mt-1 text-sm text-neutral-500">Explore collection</p>
-        </a><a href="collections.html" class="group"><img src="img/products/n7.jpg" alt="New style"
-            class="aspect-[3/4] w-full bg-[#eeeae3] object-cover transition group-hover:scale-[1.02]">
-          <p class="mt-3 font-semibold">The latest look</p>
-          <p class="mt-1 text-sm text-neutral-500">Explore collection</p>
-        </a></div>
-    </section>
-    <section class="mb-16 bg-[#242424] px-6 py-12 text-center text-white sm:px-12">
-      <p class="text-xs font-bold uppercase tracking-[.25em] text-orange-300">Stay in the loop</p>
-      <h2 class="serif mt-3 text-3xl sm:text-4xl">A little style in your inbox.</h2>
-      <p class="mx-auto mt-3 max-w-lg text-sm leading-6 text-white/60">Sign up for updates, new arrivals and exclusive
-        offers.</p>
-      <form id="newsletter-form" class="mx-auto mt-7 flex max-w-xl flex-col gap-3 sm:flex-row"><input required
-          type="email" placeholder="Your email address"
-          class="min-w-0 flex-1 bg-white px-5 py-4 text-sm text-black outline-none"><button
-          class="bg-orange-600 px-7 py-4 text-xs font-bold uppercase tracking-widest hover:bg-orange-700">Subscribe</button>
-      </form>
-      <p id="newsletter-message" class="mt-3 text-sm text-orange-200" aria-live="polite"></p>
-    </section>
-  </main>
-  <footer class="bg-[#242424] px-5 py-12 text-white md:px-8">
-    <div class="mx-auto flex max-w-7xl flex-col justify-between gap-8 sm:flex-row">
-      <div><a href="index.html" class="serif text-3xl font-bold">Nostra<span class="text-orange-500">.</span></a>
-        <p class="mt-3 max-w-sm text-sm leading-6 text-white/60">Looking good should feel this easy. Discover your next
-          favourite style with Nostra.</p>
-      </div>
-      <div>
-        <p class="mb-4 text-xs font-bold uppercase tracking-widest text-white/50">Explore</p>
-        <div class="flex flex-col gap-3 text-sm"><a href="index.html" class="hover:text-orange-300">Home</a><a
-            href="collections.html" class="hover:text-orange-300">Collections</a><a href="contactus.html"
-            class="hover:text-orange-300">Contact us</a></div>
-      </div>
-      <div class="flex gap-5 text-lg"><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a
-          href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a><a href="#" aria-label="Facebook"><i
-            class="fa-brands fa-facebook"></i></a></div>
+    <!--Offer Bar-->
+    <div class="offer-bar">
+        <p>Sign up and <b>get 20% off</b> your first order
+            <i id="offer-close" class="fa-solid fa-xmark"></i>
+        </p>
     </div>
-    <div class="mx-auto mt-10 max-w-7xl border-t border-white/15 pt-5 text-xs text-white/50">© 2026 Nostra. All rights
-      reserved.</div>
-  </footer>
-  <script>
-    const menu = document.getElementById('mobile-menu');
-    document.getElementById('menu-open').onclick = () => menu.classList.remove('hidden');
-    document.getElementById('menu-close').onclick = () => menu.classList.add('hidden');
-    document.getElementById('offer-close').onclick = () => document.getElementById('offer-bar').remove();
-    const slides = ['img/others/slider-one.jpg', 'img/others/slider-two.jpg', 'img/others/slider-three.jpg'];
-    let slide = 0;
-     function showSlide() 
-     { 
-    document.getElementById('hero-image').src = slides[slide] 
-  }
 
-    document.getElementById('slide-next').onclick = () => 
-    { 
-      slide = (slide + 1) % slides.length; showSlide() 
-    };
-     document.getElementById('slide-prev').onclick = () =>
-      { 
-        slide = (slide + slides.length - 1) % slides.length; showSlide() 
+    <!--Navigation Bar-->
+    <nav class="navbar">
+        <h1>Nostra</h1>
+        <div class="navbar-links">
+            <p class="navbar-link"><a href="./index.html">Home</a></p>
+            <p class="navbar-link"><a href="#new-arrival">New Arrivals</a></p>
+            <p class="navbar-link"><a href="#most-wanted">Most Wanted</a></p>
+            <p class="navbar-link"><a href="./collections.html">Collections</a></p>
+            <p class="navbar-link"><a href="./contactus.html">Contact Us</a></p>
+        </div>
 
-     }; setInterval(() => { slide = (slide + 1) % slides.length; showSlide() }, 5000);
-    
-     document.getElementById('newsletter-form').addEventListener('submit', e =>
-      {
-         e.preventDefault(); 
-         document.getElementById('newsletter-message').textContent = 'Thanks for subscribing!'; e.target.reset()
-       });
-  </script>
+        <div class="navbar-menu-toggle">
+            <i id="side-navbar-activate" class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+    <!--Side Navbar-->
+    <div class="side-navbar">
+        <p class="side-navbar-close-wrap">
+            <i id="side-navbar-close" class="fa-solid fa-xmark"></i>
+        </p>
+        <div class="side-navbar-links">
+            <p class="side-navbar-link"><a href="./index.html">Home</a></p>
+            <p class="navbar-link"><a href="#new-arrival">New Arrivals</a></p>
+            <p class="side-navbar-link"><a href="#most-wanted">Most Wanted</a></p>
+            <p class="side-navbar-link"><a href="./collections.html">Collections</a></p>
+            <p class="side-navbar-link"><a href="./contactus.html">Contact Us</a></p>
+        </div>
+    </div>
+
+    <main class="container">
+
+        <!--Slider-->
+        <div class="slider">
+            <div class="slider-left-button">
+                <i id="slider-left-activate" class="fa-solid fa-angle-left"></i>
+            </div>
+
+            <div class="slider-content">
+                <p class="slider-tag">New Season</p>
+                <h1>Level up your style with our</h1>
+                <h4>Summer Collections</h4>
+                <button id="shop-now-button">Shop Now <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <div class="slider-image-container">
+                <img class="slider-image" src="img/others/slider-one.jpg" alt="Summer collection look one">
+                <img class="slider-image" src="img/others/slider-two.jpg" alt="Summer collection look two">
+                <img class="slider-image" src="img/others/slider-three.jpg" alt="Summer collection look three">
+            </div>
+
+            <div class="slider-right-button">
+                <i id="slider-right-activate" class="fa-solid fa-angle-right"></i>
+            </div>
+        </div>
+
+        <!--Brands-->
+        <section class="section brands-section">
+            <p class="eyebrow">Our Partners</p>
+            <h2>Brands</h2>
+            <div class="brands">
+                <div class="brands-item">
+                    <img class="brands-icon" src="img/icons/puma.png" alt="Puma">
+                    <p>Puma</p>
+                </div>
+                <div class="brands-item">
+                    <img class="brands-icon" src="img/icons/adidas.png" alt="Adidas">
+                    <p>Adidas</p>
+                </div>
+                <div class="brands-item">
+                    <img class="brands-icon" src="img/icons/simple.png" alt="Simple">
+                    <p>Simple</p>
+                </div>
+                <div class="brands-item">
+                    <img class="brands-icon" src="img/icons/leaves.png" alt="Leaves">
+                    <p>Leaves</p>
+                </div>
+                <div class="brands-item">
+                    <img class="brands-icon" src="img/icons/behance.png" alt="Behance">
+                    <p>Behance</p>
+                </div>
+                <div class="brands-item">
+                    <img class="brands-icon" src="img/icons/twitch.png" alt="Twitch">
+                    <p>Twitch</p>
+                </div>
+                <div class="brands-item">
+                    <img class="brands-icon" src="img/icons/nike.png" alt="Nike">
+                    <p>Nike</p>
+                </div>
+            </div>
+        </section>
+
+        <!--Services-->
+        <section class="section initial-scroll-animate reveal-scroll-animate">
+            <div class="service-intro">
+                <div>
+                    <p class="eyebrow eyebrow-left">Why Nostra</p>
+                    <h2>We Provide Best<br>Customer Experiences</h2>
+                </div>
+                <div>
+                    <p>We ensure that our customers have the best shopping experience, from the first click to the day their order arrives at the door.</p>
+                </div>
+            </div>
+
+            <div class="service-features">
+                <div>
+                    <i class="fa-regular fa-circle-check"></i>
+                    <h4>Original Products</h4>
+                    <p>Carefully selected styles for your everyday wardrobe.</p>
+                </div>
+                <div>
+                    <i class="fa-regular fa-face-smile"></i>
+                    <h4>Satisfaction Guarantee</h4>
+                    <p>A friendly team ready to help with your shopping needs.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-broom"></i>
+                    <h4>New Arrival Everyday</h4>
+                    <p>New looks and fresh finds added to our collection.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <h4>Fast &amp; Free Shipping</h4>
+                    <p>Convenient delivery to bring your picks to your door.</p>
+                </div>
+            </div>
+        </section>
+
+        <!--New Arrivals-->
+        <section class="section initial-scroll-animate reveal-scroll-animate">
+            <p class="eyebrow">Fresh Drops</p>
+            <h2 id="new-arrival">New Arrivals</h2>
+
+            <div class="new-arrival">
+                <div class="new-arrival-container">
+                    <img src="img/products/f1.jpg" alt="Floral summer shirt">
+                    <div class="overlay"></div>
+                    <button>Shop Now <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <div class="new-arrival-container">
+                    <img src="img/products/f7.jpg" alt="Party floral shirt">
+                    <div class="overlay"></div>
+                    <button>Shop Now <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <div class="new-arrival-container">
+                    <img src="img/products/n1.jpg" alt="New arrival item">
+                    <div class="overlay"></div>
+                    <button>Shop Now <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <div class="new-arrival-container">
+                    <img src="img/products/n7.jpg" alt="New arrival item">
+                    <div class="overlay"></div>
+                    <button>Shop Now <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!--Most Wanted-->
+        <section class="section initial-scroll-animate reveal-scroll-animate">
+            <p class="eyebrow">Customer Favourites</p>
+            <h2 id="most-wanted">Most Wanted</h2>
+
+            <div class="most-wanted">
+                <div class="most-wanted-container">
+                    <img src="img/products/n8.jpg" alt="Most wanted item">
+                    <p class="sale-overlay">Sale</p>
+                    <img class="like-button" src="img/icons/blackheart.png" alt="Like">
+                </div>
+
+                <div class="most-wanted-container">
+                    <img src="img/products/f1.jpg" alt="Most wanted item">
+                    <p class="sale-overlay">Sale</p>
+                    <img class="like-button" src="img/icons/blackheart.png" alt="Like">
+                </div>
+
+                <div class="most-wanted-container">
+                    <img src="img/products/n1.jpg" alt="Most wanted item">
+                    <p class="sale-overlay">Sale</p>
+                    <img class="like-button" src="img/icons/blackheart.png" alt="Like">
+                </div>
+
+                <div class="most-wanted-container">
+                    <img src="img/products/n7.jpg" alt="Most wanted item">
+                    <p class="sale-overlay">Sale</p>
+                    <img class="like-button" src="img/icons/blackheart.png" alt="Like">
+                </div>
+
+                <div class="most-wanted-container">
+                    <img src="img/products/n3.jpg" alt="Most wanted item">
+                    <p class="sale-overlay">Sale</p>
+                    <img class="like-button" src="img/icons/blackheart.png" alt="Like">
+                </div>
+
+                <div class="most-wanted-container">
+                    <img src="img/products/f7.jpg" alt="Most wanted item">
+                    <p class="sale-overlay">Sale</p>
+                    <img class="like-button" src="img/icons/blackheart.png" alt="Like">
+                </div>
+
+                <div class="most-wanted-container">
+                    <img src="img/products/n4.jpg" alt="Most wanted item">
+                    <p class="sale-overlay">Sale</p>
+                    <img class="like-button" src="img/icons/blackheart.png" alt="Like">
+                </div>
+
+                <div class="most-wanted-container">
+                    <img src="img/products/n7.jpg" alt="Most wanted item">
+                    <p class="sale-overlay">Sale</p>
+                    <img class="like-button" src="img/icons/blackheart.png" alt="Like">
+                </div>
+            </div>
+        </section>
+
+        <!--Limited Offer-->
+        <section class="section initial-scroll-animate reveal-scroll-animate">
+            <div class="limited-offer">
+                <div class="limited-offer-img">
+                    <img src="img/others/offer.jpg" alt="Limited offer">
+                </div>
+                <div class="limited-offer-text">
+                    <p class="eyebrow eyebrow-left">Limited Time</p>
+                    <h2>Limited Offer</h2>
+                    <h4>35% OFF on this for the first 30 Customers</h4>
+                    <button>Shop Now <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!--Newsletter-->
+        <section class="news">
+            <h2>Join our Newsletter</h2>
+            <p>Sign up for our email newsletter to get exclusive discounts, updates, and more.</p>
+            <div class="news-form">
+                <input class="search" type="email" placeholder="Enter your email">
+                <button>Subscribe <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </section>
+
+    </main>
+
+    <!--Footer-->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-box-1">
+                <h2 class="headingText">Nostra</h2>
+                <p>Nostra, India’s no. 1 online fashion destination justifies its fashion relevance by bringing something new and chic to the table on the daily. </p>
+                <div class="footer-icon-container">
+                    <i class="icon fa-brands fa-instagram"></i>
+                    <i class="icon fa-brands fa-twitter"></i>
+                    <i class="icon fa-brands fa-facebook"></i>
+                </div>
+            </div>
+        </div>
+        <p class="subtitle">&copy; 2026 Nostra.com</p>
+    </footer>
+
+    <!--Link Javascript File-->
+    <script src="script.js"></script>
 </body>
-
 </html>

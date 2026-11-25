@@ -5,258 +5,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collections | Nostra</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <style>
-        body {
-            font-family: 'DM Sans', sans-serif
-        }
-
-        .serif {
-            font-family: 'Playfair Display', serif
-        }
-    </style>
 </head>
 
-<body class="bg-[#faf9f6] text-[#242424]">
-    <div id="offer-bar" class="bg-[#242424] px-4 py-2 text-center text-xs text-white sm:text-sm">Sign up today and get
-        <strong class="text-amber-300">20% OFF</strong> your first order <button id="offer-close" class="ml-4"
-            aria-label="Close offer"><i class="fa-solid fa-xmark"></i></button>
+<body>
+
+    <!--Offer Bar-->
+    <div class="offer-bar">
+        <p>Sign up and <b>get 20% off</b> your first order
+            <i id="offer-close" class="fa-solid fa-xmark"></i>
+        </p>
     </div>
-    <header class="sticky top-0 z-40 border-b border-black/5 bg-[#faf9f6]/95 backdrop-blur">
-        <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-8"><a href="index.html"
-                class="serif text-3xl font-bold">Nostra<span class="text-orange-600">.</span></a>
-            <div class="hidden gap-9 text-sm font-semibold md:flex"><a href="index.html"
-                    class="hover:text-orange-600">Home</a><a href="collections.html"
-                    class="text-orange-700">Collections</a><a href="contactus.html"
-                    class="hover:text-orange-600">Contact Us</a></div><button id="menu-open" class="text-xl md:hidden"
-                aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
-        </nav>
-    </header>
-    <div id="mobile-menu" class="fixed inset-0 z-50 hidden bg-[#242424] p-7 text-white">
-        <div class="flex justify-end"><button id="menu-close" class="text-2xl" aria-label="Close menu"><i
-                    class="fa-solid fa-xmark"></i></button></div>
-        <div class="mt-16 flex flex-col gap-8 text-2xl"><a href="index.html">Home</a><a
-                href="collections.html">Collections</a><a href="contactus.html">Contact Us</a></div>
-    </div>
-    <main class="mx-auto max-w-7xl px-5 py-12 md:px-8">
-        <div class="mb-10">
-            <p class="text-xs font-bold uppercase tracking-[.25em] text-orange-700">Find your next favourite</p>
-            <h1 class="serif mt-2 text-4xl sm:text-5xl">The collection<span class="text-orange-600">.</span></h1>
-            <p class="mt-3 max-w-xl text-sm leading-6 text-neutral-500">Explore easy-to-wear pieces for sunny days,
-                weekends and everything in between.</p>
+
+    <!--Navigation Bar-->
+    <nav class="navbar">
+        <h1><a href="./index.html">Nostra</a></h1>
+        <div class="navbar-links">
+            <p class="navbar-link"><a href="./index.html">Home</a></p>
+            <p class="navbar-link"><a href="./index.html#new-arrival">New Arrival</a></p>
+            <p class="navbar-link"><a href="./index.html#most-wanted">Most Wanted</a></p>
+            <p class="navbar-link"><a href="./collections.html" class="active">Collections</a></p>
+            <p class="navbar-link"><a href="./contactus.html">Contact Us</a></p>
         </div>
-        <div class="grid gap-8 lg:grid-cols-[220px_1fr]">
-            <aside class="h-fit border border-black/10 bg-white p-6">
-                <div class="mb-5 flex items-center justify-between">
-                    <h2 class="font-bold">Filter by</h2><button id="clear-filters"
-                        class="text-xs font-semibold text-orange-700 underline">Clear all</button>
+        <div class="navbar-menu-toggle">
+            <i id="side-navbar-activate" class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+    <!--Side Navbar-->
+    <div class="side-navbar">
+        <p class="side-navbar-close-wrap">
+            <i id="side-navbar-close" class="fa-solid fa-xmark"></i>
+        </p>
+        <div class="side-navbar-links">
+            <p class="side-navbar-link"><a href="./index.html">Home</a></p>
+            <p class="side-navbar-link"><a href="./index.html#most-wanted">Most Wanted</a></p>
+            <p class="side-navbar-link"><a href="./collections.html">Collections</a></p>
+            <p class="side-navbar-link"><a href="./contactus.html">Contact Us</a></p>
+        </div>
+    </div>
+
+    <main class="container">
+
+        <!--Page Header-->
+        <header class="page-hero">
+            <p class="breadcrumb"><a href="./index.html">Home</a> / Collections</p>
+            <p class="eyebrow eyebrow-left">Shop by style</p>
+            <h1>Our Collections</h1>
+            <p class="page-hero-text">Find the perfect piece for every occasion, from sunny beach days to late-night
+                parties.</p>
+        </header>
+
+        <!--Shop Layout: filters + products-->
+        <section class="shop">
+
+            <aside class="filter-section">
+                <div class="filter-head">
+                    <h3>Filter</h3>
+                    <button type="button" id="reset-filters" class="filter-reset">Reset all</button>
                 </div>
-                <div class="space-y-7">
-                    <fieldset>
-                        <legend class="mb-3 text-xs font-bold uppercase tracking-widest">Occasion</legend>
-                        <div class="space-y-3 text-sm"><label class="flex items-center gap-3"><input
-                                    class="accent-orange-600" type="checkbox" name="filter"
-                                    value="summer">Summer</label><label class="flex items-center gap-3"><input
-                                    class="accent-orange-600" type="checkbox" name="filter"
-                                    value="party">Party</label><label class="flex items-center gap-3"><input
-                                    class="accent-orange-600" type="checkbox" name="filter" value="beach">Beach</label>
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <legend class="mb-3 text-xs font-bold uppercase tracking-widest">Colours</legend>
-                        <div class="space-y-3 text-sm"><label class="flex items-center gap-3"><input
-                                    class="accent-orange-600" type="checkbox" name="filter"
-                                    value="red">Red</label><label class="flex items-center gap-3"><input
-                                    class="accent-orange-600" type="checkbox" name="filter"
-                                    value="blue">Blue</label><label class="flex items-center gap-3"><input
-                                    class="accent-orange-600" type="checkbox" name="filter"
-                                    value="white">White</label><label class="flex items-center gap-3"><input
-                                    class="accent-orange-600" type="checkbox" name="filter" value="green">Green</label>
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <legend class="mb-3 text-xs font-bold uppercase tracking-widest">Arrivals</legend>
-                        <div class="space-y-3 text-sm"><label class="flex items-center gap-3"><input
-                                    class="accent-orange-600" type="checkbox" name="filter"
-                                    value="new">New</label><label class="flex items-center gap-3"><input
-                                    class="accent-orange-600" type="checkbox" name="filter" value="old">Classic</label>
-                        </div>
-                    </fieldset>
+
+                <div class="filter-group">
+                    <h3>Occasion</h3>
+                    <div class="filter-options">
+                        <label class="filter-option"><input type="checkbox" name="tags" value="summer"> Summer</label>
+                        <label class="filter-option"><input type="checkbox" name="tags" value="party"> Party</label>
+                        <label class="filter-option"><input type="checkbox" name="tags" value="beach"> Beach</label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Colors</h3>
+                    <div class="filter-options">
+                        <label class="filter-option"><input type="checkbox" name="tags" value="red"> Red</label>
+                        <label class="filter-option"><input type="checkbox" name="tags" value="blue"> Blue</label>
+                        <label class="filter-option"><input type="checkbox" name="tags" value="white"> White</label>
+                        <label class="filter-option"><input type="checkbox" name="tags" value="green"> Green</label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Arrivals</h3>
+                    <div class="filter-options">
+                        <label class="filter-option"><input type="checkbox" name="tags" value="new"> New</label>
+                        <label class="filter-option"><input type="checkbox" name="tags" value="old"> Old</label>
+                    </div>
                 </div>
             </aside>
-            <section>
-                <div class="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                    <p id="result-count" class="text-sm text-neutral-500">Showing all products</p><label
-                        class="flex w-full items-center gap-3 border border-black/15 bg-white px-4 py-3 sm:max-w-xs"><i
-                            class="fa-solid fa-magnifying-glass text-neutral-400"></i><input id="product-search"
-                            type="search" placeholder="Search products..."
-                            class="w-full bg-transparent text-sm outline-none"></label>
+
+            <div class="product-section">
+                <div class="product-toolbar">
+                    <span id="product-count" class="product-count"></span>
+                    <div class="navbar-search">
+                        <input type="search" id="search-input" placeholder="Search products">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
                 </div>
-                <div id="products" class="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 xl:grid-cols-4"></div>
-                <p id="empty-state" class="hidden py-16 text-center text-sm text-neutral-500">No products match your
-                    search. Try changing your filters.</p>
-            </section>
-        </div>
-        <section class="mt-20 bg-[#242424] px-6 py-12 text-center text-white sm:px-12">
-            <p class="text-xs font-bold uppercase tracking-[.25em] text-orange-300">Nostra notes</p>
-            <h2 class="serif mt-3 text-3xl">Good things, straight to your inbox.</h2>
-            <p class="mt-3 text-sm text-white/60">Get new arrivals, updates and special offers.</p>
-            <form id="newsletter-form" class="mx-auto mt-6 flex max-w-xl flex-col gap-3 sm:flex-row"><input required
-                    type="email" placeholder="Your email address"
-                    class="min-w-0 flex-1 bg-white px-5 py-4 text-sm text-black outline-none"><button
-                    class="bg-orange-600 px-7 py-4 text-xs font-bold uppercase tracking-widest">Subscribe</button>
-            </form>
-            <p id="newsletter-message" class="mt-3 text-sm text-orange-200" aria-live="polite"></p>
+
+                <div class="products" id="products"></div>
+            </div>
         </section>
+
+        <!--Newsletter-->
+        <section class="news">
+            <h2>Join our Newsletter</h2>
+            <p>Sign up for our email newsletter to get exclusive discounts, updates, and more.</p>
+            <div class="news-form">
+                <input class="search" type="email" placeholder="Enter your email">
+                <button>Subscribe <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </section>
+
     </main>
-    <footer class="bg-[#242424] px-5 py-10 text-white md:px-8">
-        <div class="mx-auto flex max-w-7xl flex-col justify-between gap-6 sm:flex-row">
-            <div><a href="index.html" class="serif text-3xl font-bold">Nostra<span class="text-orange-500">.</span></a>
-                <p class="mt-2 text-sm text-white/60">Looking good should feel this easy.</p>
+
+    <!--Footer-->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-box-1">
+                <h2 class="headingText">Nostra</h2>
+                <p>Nostra, India’s no. 1 online fashion destination justifies its fashion relevance by bringing something new and chic to the table on the daily. </p>
+                <div class="footer-icon-container">
+                    <i class="icon fa-brands fa-instagram"></i>
+                    <i class="icon fa-brands fa-twitter"></i>
+                    <i class="icon fa-brands fa-facebook"></i>
+                </div>
             </div>
-            <div class="flex gap-6 text-sm"><a href="index.html">Home</a><a href="collections.html">Collections</a><a
-                    href="contactus.html">Contact</a></div>
-            <p class="text-xs text-white/50">© 2026 Nostra. All rights reserved.</p>
         </div>
+        <p class="subtitle">&copy; 2026 Nostra.com</p>
     </footer>
-    <script>
-        const products = [
-            {
-                id: 1,
-                name: "Floral Summer Shirt",
-                src: "products/f1.jpg",
-                desc: "",
-                price: 220,
-                tags: ["new", "blue", "summer"]
-            },
 
-            {
-                id: 2,
-                name: "Summer Green",
-                src: "products/f2.jpg",
-                desc: "",
-                price: 260,
-                tags: ["new", "green", "beach"]
-            },
-
-            {
-                id: 3,
-                name: "Party Floral Shirt",
-                src: "products/f3.jpg",
-                desc: "",
-                price: 399,
-                tags: ["old", "red", "party"]
-            },
-
-            {
-                id: 4,
-                name: "Floral Summer Shirt",
-                src: "products/f4.jpg",
-                desc: "",
-                price: 399,
-                tags: ["old", "white", "beach"]
-            },
-            {
-                id: 5,
-                name: "Beach Shirt",
-                src: "products/f5.jpg",
-                desc: "",
-                price: 579,
-                tags: ["old", "white", "beach"]
-            }
-            ,
-            {
-                id: 6,
-                name: "Shirt Party Red",
-                src: "products/f6.jpg",
-                desc: "",
-                price: 579,
-                tags: ["old", "red", "party"]
-            },
-
-            {
-                id: 7,
-                name: "Party Floral Shirt",
-                src: "products/f3.jpg",
-                desc: "",
-                price: 399,
-                tags: ["old", "red", "party"]
-            },
-            {
-                id: 8,
-                name: "Shirt Party Red",
-                src: "products/f6.jpg",
-                desc: "",
-                price: 579,
-                tags: ["old", "red", "party"]
-            },
-            {
-                id: 9,
-                name: "Floral Summer Shirt",
-                src: "products/f1.jpg",
-                desc: "",
-                price: 220,
-                tags: ["new", "blue", "summer"]
-            },
+    <script src="./collections.js"></script>
 
 
-        ]
-
-        
-
-
-        const grid = document.getElementById('products')
-         search = document.getElementById('product-search')
-         checks = [...document.querySelectorAll('input[name="filter"]')]; 
-        function render()
-         {
-            const chosen = checks.filter(c => c.checked).map(c => c.value), term = search.value.trim().toLowerCase(); 
-            const shown = products.filter(p => (!chosen.length || chosen.some(t => p.tags.includes(t))) && p.name.toLowerCase().includes(term)); 
-            grid.innerHTML = shown.map(p => 
-            `<article class="group">
-            <div class="relative overflow-hidden bg-[#eeeae3]">
-                <img src="img/${p.src}" alt="${p.name}" class="aspect-[3/4] w-full object-cover transition duration-500 group-hover:scale-105">
-            <span class="absolute left-3 top-3 bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-widest">
-                ${p.tags.includes('new') ? 'New' : 'Nostra edition'}
-            </span>
-            </div>
-            <div class="pt-3">
-                <h3 class="text-sm font-semibold">${p.name}</h3>
-                <p class="mt-1 text-sm text-neutral-500">₹${p.price}</p>
-            </div>
-            </article>`).join('');
-            
-            document.getElementById('result-count').textContent = `Showing ${shown.length} of ${products.length} products`;
-            document.getElementById('empty-state').classList.toggle('hidden', shown.length !== 0)
-        } 
-        
-        checks.forEach(c => c.addEventListener('change', render));
-        
-        search.addEventListener('input', render);
-        
-        document.getElementById('clear-filters').onclick = () => {
-            checks.forEach(c => c.checked = false); search.value = '';
-            render()
-        };
-
-        render();
-        
-        const menu = document.getElementById('mobile-menu'); document.getElementById('menu-open').onclick = () => menu.classList.remove('hidden');
-        document.getElementById('menu-close').onclick = () => menu.classList.add('hidden');
-        document.getElementById('offer-close').onclick = () => document.getElementById('offer-bar').remove();
-        document.getElementById('newsletter-form').addEventListener('submit', e => {
-            e.preventDefault();
-            document.getElementById('newsletter-message').textContent = 'Thanks for subscribing!'; e.target.reset()
-        });
-
-       
-    </script>
 </body>
 
 </html>
