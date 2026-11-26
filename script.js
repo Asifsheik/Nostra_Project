@@ -113,21 +113,3 @@ window.addEventListener("scroll", function () {
     })
 
 })
-
-
-//Collections
-
-// ---- Search by product name ----
-var searchInput = document.querySelector(".navbar-search input")
-var searchText = ""
-
-searchInput.addEventListener("input", function (e) {
-    searchText = e.target.value.trim().toLowerCase()
-    update()
-})
-
-// Hide the product if its name doesn't match the search text
-var productName = product.querySelector("h1").innerText.toLowerCase()
-if (!productName.includes(searchText)) {
-    product.style.display = "none"
-}
